@@ -8,13 +8,6 @@ RUN rm -rf /var/www/html
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-#RUN composer install && \
-#	cp .env.example .env && \
-#	php artisan key: generate &&ls \
-#	php artisan config:cache
-# php artisan migrate
-
-#COPY . /var/www
 RUN ln -s public html
 
 EXPOSE 9000
